@@ -99,6 +99,8 @@ for i, item in enumerate(data['weeks']):
             'week': row_weeks,
             'game_id': row_game_id,
             'date': row_game_date,
+            'home_team': row_home_team,
+            'away_team': row_away_team,
             'conference_game': row_conference_game,
             'venue': row_venue,
             'roof_type': row_roof_type,
