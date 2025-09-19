@@ -1,0 +1,1235 @@
+{
+  "id": "d128603c-516d-4814-83bf-b14085503e1a",
+  "name": "NFL Playoffs",
+  "location": "New Orleans, LA, USA",
+  "status": "closed",
+  "league": {
+    "id": "3c6d318a-6164-4290-9bbc-bf9bb21cc4b8",
+    "name": "National Football League",
+    "alias": "NFL"
+  },
+  "season": {
+    "id": "26a6a4e0-dfc9-11ee-8f7c-27de425212d4",
+    "year": 2024,
+    "type": "PST"
+  },
+  "rounds": [
+    {
+      "id": "ea9de897-45d5-42f6-8d6b-98fab83c7a57",
+      "sequence": 1,
+      "name": "Wild Card Round",
+      "bracketed": [
+        {
+          "bracket": {
+            "id": "8e830e68-ae05-4499-8eb5-9a8af7e490ab",
+            "name": "NFL Playoffs",
+            "location": "New Orleans, LA, USA"
+          },
+          "games": [
+            {
+              "id": "6b71f468-5099-48ab-8957-e64d90f09857",
+              "title": "NFC Wild Card",
+              "status": "closed",
+              "coverage": "full",
+              "game_type": "playoff",
+              "local_game_date": "2025-01-12",
+              "scheduled": "2025-01-12T21:30:00+00:00",
+              "entry_mode": "LDE",
+              "weather": "Cloudy Temp: 40 F, Humidity: 47%, Wind: W 6 mph",
+              "conference_game": true,
+              "time_zones": {
+                "venue": "US/Eastern",
+                "home": "US/Eastern",
+                "away": "US/Central"
+              },
+              "venue": {
+                "id": "4fa8c29c-6626-464c-8540-314ed7535e1b",
+                "name": "Lincoln Financial Field",
+                "city": "Philadelphia",
+                "state": "PA",
+                "country": "USA",
+                "zip": "19148",
+                "address": "1020 Pattison Avenue",
+                "capacity": 69596,
+                "surface": "turf",
+                "roof_type": "outdoor",
+                "sr_id": "sr:venue:1833",
+                "location": {
+                  "lat": "39.900872",
+                  "lng": "-75.167311"
+                }
+              },
+              "home": {
+                "name": "Philadelphia Eagles",
+                "alias": "PHI",
+                "game_number": 1,
+                "id": "386bdbf9-9eea-4869-bb9a-274b0bc66e80"
+              },
+              "away": {
+                "name": "Green Bay Packers",
+                "alias": "GB",
+                "game_number": 1,
+                "id": "a20471b4-a8d9-40c7-95ad-90cc30e46932"
+              },
+              "scoring": {
+                "home_points": 22,
+                "away_points": 10,
+                "periods": [
+                  {
+                    "period_type": "quarter",
+                    "id": "3177feec-9a51-4758-b01d-544655058ca7",
+                    "number": 1,
+                    "sequence": 1,
+                    "home_points": 10,
+                    "away_points": 0
+                  },
+                  {
+                    "period_type": "quarter",
+                    "id": "64e413e9-4095-4a35-a90d-e3b5a32c5892",
+                    "number": 2,
+                    "sequence": 2,
+                    "home_points": 0,
+                    "away_points": 0
+                  },
+                  {
+                    "period_type": "quarter",
+                    "id": "406a0c3f-21ea-4ec9-ad3e-a5765a0baba4",
+                    "number": 3,
+                    "sequence": 3,
+                    "home_points": 6,
+                    "away_points": 3
+                  },
+                  {
+                    "period_type": "quarter",
+                    "id": "e77f4573-4cfc-4555-b001-1dbbc9976e98",
+                    "number": 4,
+                    "sequence": 4,
+                    "home_points": 6,
+                    "away_points": 7
+                  }
+                ]
+              }
+            },
+            {
+              "id": "82356cf4-56a3-4472-94a2-7774f33f0740",
+              "title": "AFC Wild Card",
+              "status": "closed",
+              "coverage": "full",
+              "game_type": "playoff",
+              "local_game_date": "2025-01-12",
+              "scheduled": "2025-01-12T18:00:00+00:00",
+              "entry_mode": "LDE",
+              "weather": "Cloudy Temp: 32 F, Humidity: 76%, Wind: SSW 10 mph",
+              "conference_game": true,
+              "time_zones": {
+                "venue": "US/Eastern",
+                "home": "US/Eastern",
+                "away": "US/Mountain"
+              },
+              "venue": {
+                "id": "e9e0828e-37fc-4238-a317-49037577dd55",
+                "name": "Highmark Stadium",
+                "city": "Orchard Park",
+                "state": "NY",
+                "country": "USA",
+                "zip": "14127",
+                "address": "One Bills Drive",
+                "capacity": 71608,
+                "surface": "artificial",
+                "roof_type": "outdoor",
+                "sr_id": "sr:venue:8171",
+                "location": {
+                  "lat": "42.773826",
+                  "lng": "-78.786589"
+                }
+              },
+              "home": {
+                "name": "Buffalo Bills",
+                "alias": "BUF",
+                "game_number": 1,
+                "id": "768c92aa-75ff-4a43-bcc0-f2798c2e1724"
+              },
+              "away": {
+                "name": "Denver Broncos",
+                "alias": "DEN",
+                "game_number": 1,
+                "id": "ce92bd47-93d5-4fe9-ada4-0fc681e6caa0"
+              },
+              "scoring": {
+                "home_points": 31,
+                "away_points": 7,
+                "periods": [
+                  {
+                    "period_type": "quarter",
+                    "id": "aa9bb118-497f-4fa2-a423-9bbb21db300f",
+                    "number": 1,
+                    "sequence": 1,
+                    "home_points": 3,
+                    "away_points": 7
+                  },
+                  {
+                    "period_type": "quarter",
+                    "id": "286ac0b4-7b0a-4bfc-a8a4-10bb50af1929",
+                    "number": 2,
+                    "sequence": 2,
+                    "home_points": 7,
+                    "away_points": 0
+                  },
+                  {
+                    "period_type": "quarter",
+                    "id": "ecc55779-b8f8-40cf-a9c4-dbb1d529bb09",
+                    "number": 3,
+                    "sequence": 3,
+                    "home_points": 11,
+                    "away_points": 0
+                  },
+                  {
+                    "period_type": "quarter",
+                    "id": "a9b28816-6aef-4aa5-8395-f753951bc986",
+                    "number": 4,
+                    "sequence": 4,
+                    "home_points": 10,
+                    "away_points": 0
+                  }
+                ]
+              }
+            },
+            {
+              "id": "2adf422c-e1e2-4cc9-8fd6-7ae89e73080e",
+              "title": "AFC Wild Card",
+              "status": "closed",
+              "coverage": "full",
+              "game_type": "playoff",
+              "local_game_date": "2025-01-11",
+              "scheduled": "2025-01-11T21:30:00+00:00",
+              "entry_mode": "LDE",
+              "weather": "Controlled Climate Temp: 53 F, Humidity: 40%, Wind: S 4 mph",
+              "conference_game": true,
+              "time_zones": {
+                "venue": "US/Central",
+                "home": "US/Central",
+                "away": "US/Pacific"
+              },
+              "venue": {
+                "id": "6a72e5ca-33d0-40af-8e6b-b32a4d3d9346",
+                "name": "NRG Stadium",
+                "city": "Houston",
+                "state": "TX",
+                "country": "USA",
+                "zip": "77054",
+                "address": "One Reliant Park",
+                "capacity": 72220,
+                "surface": "artificial",
+                "roof_type": "retractable_dome",
+                "sr_id": "sr:venue:2402",
+                "location": {
+                  "lat": "29.684735",
+                  "lng": "-95.410725"
+                }
+              },
+              "home": {
+                "name": "Houston Texans",
+                "alias": "HOU",
+                "game_number": 1,
+                "id": "82d2d380-3834-4938-835f-aec541e5ece7"
+              },
+              "away": {
+                "name": "Los Angeles Chargers",
+                "alias": "LAC",
+                "game_number": 1,
+                "id": "1f6dcffb-9823-43cd-9ff4-e7a8466749b5"
+              },
+              "scoring": {
+                "home_points": 32,
+                "away_points": 12,
+                "periods": [
+                  {
+                    "period_type": "quarter",
+                    "id": "975710fb-0fd2-4dc6-a131-23affe547778",
+                    "number": 1,
+                    "sequence": 1,
+                    "home_points": 0,
+                    "away_points": 6
+                  },
+                  {
+                    "period_type": "quarter",
+                    "id": "abc8715d-6ff6-4595-878f-80ddf20906d4",
+                    "number": 2,
+                    "sequence": 2,
+                    "home_points": 10,
+                    "away_points": 0
+                  },
+                  {
+                    "period_type": "quarter",
+                    "id": "c5ea378c-b0d8-4122-9b64-4dbd758a046b",
+                    "number": 3,
+                    "sequence": 3,
+                    "home_points": 10,
+                    "away_points": 0
+                  },
+                  {
+                    "period_type": "quarter",
+                    "id": "1e11daa0-9540-4316-a4c4-14b6e2b07445",
+                    "number": 4,
+                    "sequence": 4,
+                    "home_points": 12,
+                    "away_points": 6
+                  }
+                ]
+              }
+            },
+            {
+              "id": "01d418ca-1579-46c0-b4b7-318b60d4fdac",
+              "title": "NFC Wild Card",
+              "status": "closed",
+              "coverage": "full",
+              "game_type": "playoff",
+              "local_game_date": "2025-01-13",
+              "scheduled": "2025-01-14T01:15:00+00:00",
+              "entry_mode": "LDE",
+              "weather": "Controlled Climate Temp: 58 F, Humidity: 17%, Wind: SSW 2 mph",
+              "conference_game": true,
+              "time_zones": {
+                "venue": "US/Arizona",
+                "home": "US/Pacific",
+                "away": "US/Central"
+              },
+              "venue": {
+                "id": "f8e4d2ab-53f9-4e9f-8c4a-9bc278094a84",
+                "name": "State Farm Stadium",
+                "city": "Glendale",
+                "state": "AZ",
+                "country": "USA",
+                "zip": "85305",
+                "address": "One Cardinals Drive",
+                "capacity": 63400,
+                "surface": "turf",
+                "roof_type": "retractable_dome",
+                "sr_id": "sr:venue:8165",
+                "location": {
+                  "lat": "33.527765",
+                  "lng": "-112.262090"
+                }
+              },
+              "home": {
+                "name": "Los Angeles Rams",
+                "alias": "LA",
+                "game_number": 1,
+                "id": "2eff2a03-54d4-46ba-890e-2bc3925548f3"
+              },
+              "away": {
+                "name": "Minnesota Vikings",
+                "alias": "MIN",
+                "game_number": 1,
+                "id": "33405046-04ee-4058-a950-d606f8c30852"
+              },
+              "scoring": {
+                "home_points": 27,
+                "away_points": 9,
+                "periods": [
+                  {
+                    "period_type": "quarter",
+                    "id": "53d12c67-c882-47e2-9ef4-3b5f48d485f3",
+                    "number": 1,
+                    "sequence": 1,
+                    "home_points": 10,
+                    "away_points": 0
+                  },
+                  {
+                    "period_type": "quarter",
+                    "id": "705f5643-3284-4d0f-b57d-96d0c05c9b19",
+                    "number": 2,
+                    "sequence": 2,
+                    "home_points": 14,
+                    "away_points": 3
+                  },
+                  {
+                    "period_type": "quarter",
+                    "id": "97c93cd8-f74f-4208-8633-345730b4495e",
+                    "number": 3,
+                    "sequence": 3,
+                    "home_points": 3,
+                    "away_points": 6
+                  },
+                  {
+                    "period_type": "quarter",
+                    "id": "3322bec8-d4d8-42f4-a0d5-767de34dbd60",
+                    "number": 4,
+                    "sequence": 4,
+                    "home_points": 0,
+                    "away_points": 0
+                  }
+                ]
+              }
+            },
+            {
+              "id": "c74313f1-23c4-43a0-aaac-35c3b8b14ea6",
+              "title": "AFC Wild Card",
+              "status": "closed",
+              "coverage": "full",
+              "game_type": "playoff",
+              "local_game_date": "2025-01-11",
+              "scheduled": "2025-01-12T01:00:00+00:00",
+              "entry_mode": "LDE",
+              "weather": "Clear Temp: 32 F, Humidity: 54%, Wind: WNW 12 mph",
+              "conference_game": true,
+              "time_zones": {
+                "venue": "US/Eastern",
+                "home": "US/Eastern",
+                "away": "US/Eastern"
+              },
+              "venue": {
+                "id": "d54faae0-0314-484f-8604-9d8dd08e1149",
+                "name": "M&T Bank Stadium",
+                "city": "Baltimore",
+                "state": "MD",
+                "country": "USA",
+                "zip": "21230",
+                "address": "1101 Russell Street",
+                "capacity": 71008,
+                "surface": "turf",
+                "roof_type": "outdoor",
+                "sr_id": "sr:venue:8169",
+                "location": {
+                  "lat": "39.277995",
+                  "lng": "-76.622592"
+                }
+              },
+              "home": {
+                "name": "Baltimore Ravens",
+                "alias": "BAL",
+                "game_number": 1,
+                "id": "ebd87119-b331-4469-9ea6-d51fe3ce2f1c"
+              },
+              "away": {
+                "name": "Pittsburgh Steelers",
+                "alias": "PIT",
+                "game_number": 1,
+                "id": "cb2f9f1f-ac67-424e-9e72-1475cb0ed398"
+              },
+              "scoring": {
+                "home_points": 28,
+                "away_points": 14,
+                "periods": [
+                  {
+                    "period_type": "quarter",
+                    "id": "d6d51968-bae9-4238-a1d0-a101430a982d",
+                    "number": 1,
+                    "sequence": 1,
+                    "home_points": 7,
+                    "away_points": 0
+                  },
+                  {
+                    "period_type": "quarter",
+                    "id": "e472e2c2-f8df-477a-9007-aa8c0609773a",
+                    "number": 2,
+                    "sequence": 2,
+                    "home_points": 14,
+                    "away_points": 0
+                  },
+                  {
+                    "period_type": "quarter",
+                    "id": "9ceb021e-6b85-49b4-82e7-c3b7ccf86932",
+                    "number": 3,
+                    "sequence": 3,
+                    "home_points": 7,
+                    "away_points": 14
+                  },
+                  {
+                    "period_type": "quarter",
+                    "id": "3c7aa2d3-06f0-48cc-ab95-f6c4e4b28f65",
+                    "number": 4,
+                    "sequence": 4,
+                    "home_points": 0,
+                    "away_points": 0
+                  }
+                ]
+              }
+            },
+            {
+              "id": "9a8e9530-ed68-4c1d-ba71-7e82ac643aae",
+              "title": "NFC Wild Card",
+              "status": "closed",
+              "coverage": "full",
+              "game_type": "playoff",
+              "local_game_date": "2025-01-12",
+              "scheduled": "2025-01-13T01:15:00+00:00",
+              "entry_mode": "LDE",
+              "weather": "Cloudy Temp: 58 F, Humidity: 57%, Wind: NE 2 mph",
+              "conference_game": true,
+              "time_zones": {
+                "venue": "US/Eastern",
+                "home": "US/Eastern",
+                "away": "US/Eastern"
+              },
+              "venue": {
+                "id": "6fccc39c-80bc-4c81-83d9-2d5a848c8c09",
+                "name": "Raymond James Stadium",
+                "city": "Tampa",
+                "state": "FL",
+                "country": "USA",
+                "zip": "33607",
+                "address": "4201 North Dale Mabry Highway",
+                "capacity": 69218,
+                "surface": "turf",
+                "roof_type": "outdoor",
+                "sr_id": "sr:venue:8205",
+                "location": {
+                  "lat": "27.976211",
+                  "lng": "-82.503625"
+                }
+              },
+              "home": {
+                "name": "Tampa Bay Buccaneers",
+                "alias": "TB",
+                "game_number": 1,
+                "id": "4254d319-1bc7-4f81-b4ab-b5e6f3402b69"
+              },
+              "away": {
+                "name": "Washington Commanders",
+                "alias": "WAS",
+                "game_number": 1,
+                "id": "22052ff7-c065-42ee-bc8f-c4691c50e624"
+              },
+              "scoring": {
+                "home_points": 20,
+                "away_points": 23,
+                "periods": [
+                  {
+                    "period_type": "quarter",
+                    "id": "d1a07f86-e285-490d-ae9a-830254edca53",
+                    "number": 1,
+                    "sequence": 1,
+                    "home_points": 3,
+                    "away_points": 0
+                  },
+                  {
+                    "period_type": "quarter",
+                    "id": "d504477d-ea7c-4b8e-b6ec-1336e2687e1b",
+                    "number": 2,
+                    "sequence": 2,
+                    "home_points": 7,
+                    "away_points": 10
+                  },
+                  {
+                    "period_type": "quarter",
+                    "id": "cfe59fb8-d062-4c2e-bb17-a89da1a2188b",
+                    "number": 3,
+                    "sequence": 3,
+                    "home_points": 7,
+                    "away_points": 3
+                  },
+                  {
+                    "period_type": "quarter",
+                    "id": "bcf6caf1-4d3c-49b3-9fd7-18c37290b816",
+                    "number": 4,
+                    "sequence": 4,
+                    "home_points": 3,
+                    "away_points": 10
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a3947d81-6bc5-44b4-8b74-876c957ae53c",
+      "sequence": 2,
+      "name": "Divisional Round",
+      "bracketed": [
+        {
+          "bracket": {
+            "id": "8e830e68-ae05-4499-8eb5-9a8af7e490ab",
+            "name": "NFL Playoffs",
+            "location": "New Orleans, LA, USA"
+          },
+          "games": [
+            {
+              "id": "4cee1421-117a-46ab-b458-c265a72fc946",
+              "title": "NFC Divisional",
+              "status": "closed",
+              "coverage": "full",
+              "game_type": "playoff",
+              "local_game_date": "2025-01-18",
+              "scheduled": "2025-01-19T01:00:00+00:00",
+              "entry_mode": "LDE",
+              "weather": "Controlled Climate Temp: 29 F, Humidity: 70%, Wind: NW 13 mph",
+              "conference_game": true,
+              "time_zones": {
+                "venue": "US/Eastern",
+                "home": "US/Eastern",
+                "away": "US/Eastern"
+              },
+              "venue": {
+                "id": "6e3bcf22-277d-4c06-b019-62aded51654f",
+                "name": "Ford Field",
+                "city": "Detroit",
+                "state": "MI",
+                "country": "USA",
+                "zip": "48226",
+                "address": "2000 Brush Street",
+                "capacity": 65000,
+                "surface": "artificial",
+                "roof_type": "dome",
+                "sr_id": "sr:venue:8181",
+                "location": {
+                  "lat": "42.339958",
+                  "lng": "-83.045636"
+                }
+              },
+              "home": {
+                "name": "Detroit Lions",
+                "alias": "DET",
+                "game_number": 1,
+                "id": "c5a59daa-53a7-4de0-851f-fb12be893e9e"
+              },
+              "away": {
+                "name": "Washington Commanders",
+                "alias": "WAS",
+                "game_number": 2,
+                "id": "22052ff7-c065-42ee-bc8f-c4691c50e624"
+              },
+              "scoring": {
+                "home_points": 31,
+                "away_points": 45,
+                "periods": [
+                  {
+                    "period_type": "quarter",
+                    "id": "d230e6fc-aa73-4555-aa02-817f0623f2e0",
+                    "number": 1,
+                    "sequence": 1,
+                    "home_points": 7,
+                    "away_points": 3
+                  },
+                  {
+                    "period_type": "quarter",
+                    "id": "74f4cfb4-deda-4b38-9118-903303cadb75",
+                    "number": 2,
+                    "sequence": 2,
+                    "home_points": 14,
+                    "away_points": 28
+                  },
+                  {
+                    "period_type": "quarter",
+                    "id": "6d9a6537-1566-4ee2-ace0-bb2bd803aacd",
+                    "number": 3,
+                    "sequence": 3,
+                    "home_points": 7,
+                    "away_points": 0
+                  },
+                  {
+                    "period_type": "quarter",
+                    "id": "e311660e-c8ac-41f2-b0ac-3cdb45ecd426",
+                    "number": 4,
+                    "sequence": 4,
+                    "home_points": 3,
+                    "away_points": 14
+                  }
+                ]
+              }
+            },
+            {
+              "id": "aafd386c-94e0-4856-ac49-84a7fed3e7f6",
+              "title": "AFC Divisional",
+              "status": "closed",
+              "coverage": "full",
+              "game_type": "playoff",
+              "local_game_date": "2025-01-19",
+              "scheduled": "2025-01-19T23:30:00+00:00",
+              "entry_mode": "LDE",
+              "weather": "Cloudy Temp: 19 F, Humidity: 84%, Wind: ENE 4 mph",
+              "conference_game": true,
+              "time_zones": {
+                "venue": "US/Eastern",
+                "home": "US/Eastern",
+                "away": "US/Eastern"
+              },
+              "venue": {
+                "id": "e9e0828e-37fc-4238-a317-49037577dd55",
+                "name": "Highmark Stadium",
+                "city": "Orchard Park",
+                "state": "NY",
+                "country": "USA",
+                "zip": "14127",
+                "address": "One Bills Drive",
+                "capacity": 71608,
+                "surface": "artificial",
+                "roof_type": "outdoor",
+                "sr_id": "sr:venue:8171",
+                "location": {
+                  "lat": "42.773826",
+                  "lng": "-78.786589"
+                }
+              },
+              "home": {
+                "name": "Buffalo Bills",
+                "alias": "BUF",
+                "game_number": 2,
+                "id": "768c92aa-75ff-4a43-bcc0-f2798c2e1724"
+              },
+              "away": {
+                "name": "Baltimore Ravens",
+                "alias": "BAL",
+                "game_number": 2,
+                "id": "ebd87119-b331-4469-9ea6-d51fe3ce2f1c"
+              },
+              "scoring": {
+                "home_points": 27,
+                "away_points": 25,
+                "periods": [
+                  {
+                    "period_type": "quarter",
+                    "id": "fd1234a6-6d64-4542-b3d9-e9537acecdf2",
+                    "number": 1,
+                    "sequence": 1,
+                    "home_points": 7,
+                    "away_points": 7
+                  },
+                  {
+                    "period_type": "quarter",
+                    "id": "91656bea-ba9d-412a-bad0-2cedbff0f366",
+                    "number": 2,
+                    "sequence": 2,
+                    "home_points": 14,
+                    "away_points": 3
+                  },
+                  {
+                    "period_type": "quarter",
+                    "id": "4b1fb3a9-794d-4523-b527-a9e394b48e5d",
+                    "number": 3,
+                    "sequence": 3,
+                    "home_points": 0,
+                    "away_points": 9
+                  },
+                  {
+                    "period_type": "quarter",
+                    "id": "f321dc6c-02a3-4865-86f2-3efca40bf618",
+                    "number": 4,
+                    "sequence": 4,
+                    "home_points": 6,
+                    "away_points": 6
+                  }
+                ]
+              }
+            },
+            {
+              "id": "c2523570-f40a-4438-8cb2-6ca5ec3af805",
+              "title": "NFC Divisional",
+              "status": "closed",
+              "coverage": "full",
+              "game_type": "playoff",
+              "local_game_date": "2025-01-19",
+              "scheduled": "2025-01-19T20:00:00+00:00",
+              "entry_mode": "LDE",
+              "weather": "Snow Temp: 34 F, Humidity: 67%, Wind: S 8 mph",
+              "conference_game": true,
+              "time_zones": {
+                "venue": "US/Eastern",
+                "home": "US/Eastern",
+                "away": "US/Pacific"
+              },
+              "venue": {
+                "id": "4fa8c29c-6626-464c-8540-314ed7535e1b",
+                "name": "Lincoln Financial Field",
+                "city": "Philadelphia",
+                "state": "PA",
+                "country": "USA",
+                "zip": "19148",
+                "address": "1020 Pattison Avenue",
+                "capacity": 69596,
+                "surface": "turf",
+                "roof_type": "outdoor",
+                "sr_id": "sr:venue:1833",
+                "location": {
+                  "lat": "39.900872",
+                  "lng": "-75.167311"
+                }
+              },
+              "home": {
+                "name": "Philadelphia Eagles",
+                "alias": "PHI",
+                "game_number": 2,
+                "id": "386bdbf9-9eea-4869-bb9a-274b0bc66e80"
+              },
+              "away": {
+                "name": "Los Angeles Rams",
+                "alias": "LA",
+                "game_number": 2,
+                "id": "2eff2a03-54d4-46ba-890e-2bc3925548f3"
+              },
+              "scoring": {
+                "home_points": 28,
+                "away_points": 22,
+                "periods": [
+                  {
+                    "period_type": "quarter",
+                    "id": "e7a39367-1996-4dbe-a066-8a2c27aad619",
+                    "number": 1,
+                    "sequence": 1,
+                    "home_points": 13,
+                    "away_points": 7
+                  },
+                  {
+                    "period_type": "quarter",
+                    "id": "8ad9d0d6-aab7-4521-90ce-abc7f2b003b3",
+                    "number": 2,
+                    "sequence": 2,
+                    "home_points": 0,
+                    "away_points": 3
+                  },
+                  {
+                    "period_type": "quarter",
+                    "id": "198e74db-00c5-4d02-9105-4514a8ffb23f",
+                    "number": 3,
+                    "sequence": 3,
+                    "home_points": 3,
+                    "away_points": 5
+                  },
+                  {
+                    "period_type": "quarter",
+                    "id": "f2514bf5-6d3f-433e-a4dc-e754151373cb",
+                    "number": 4,
+                    "sequence": 4,
+                    "home_points": 12,
+                    "away_points": 7
+                  }
+                ]
+              }
+            },
+            {
+              "id": "9e0aac39-b534-48ee-8a88-af0214ecf20d",
+              "title": "AFC Divisional",
+              "status": "closed",
+              "coverage": "full",
+              "game_type": "playoff",
+              "local_game_date": "2025-01-18",
+              "scheduled": "2025-01-18T21:30:00+00:00",
+              "entry_mode": "LDE",
+              "weather": "Sunny Temp: 23 F, Humidity: 43%, Wind: NNW 17 mph",
+              "conference_game": true,
+              "time_zones": {
+                "venue": "US/Central",
+                "home": "US/Central",
+                "away": "US/Central"
+              },
+              "venue": {
+                "id": "2ec4c411-dac2-403d-b091-6b6aa4a0a914",
+                "name": "GEHA Field at Arrowhead Stadium",
+                "city": "Kansas City",
+                "state": "MO",
+                "country": "USA",
+                "zip": "64129",
+                "address": "One Arrowhead Drive",
+                "capacity": 76416,
+                "surface": "turf",
+                "roof_type": "outdoor",
+                "sr_id": "sr:venue:8189",
+                "location": {
+                  "lat": "39.049019",
+                  "lng": "-94.484140"
+                }
+              },
+              "home": {
+                "name": "Kansas City Chiefs",
+                "alias": "KC",
+                "game_number": 1,
+                "id": "6680d28d-d4d2-49f6-aace-5292d3ec02c2"
+              },
+              "away": {
+                "name": "Houston Texans",
+                "alias": "HOU",
+                "game_number": 2,
+                "id": "82d2d380-3834-4938-835f-aec541e5ece7"
+              },
+              "scoring": {
+                "home_points": 23,
+                "away_points": 14,
+                "periods": [
+                  {
+                    "period_type": "quarter",
+                    "id": "25204bdc-c8db-4c92-ad9d-1dffe8574cce",
+                    "number": 1,
+                    "sequence": 1,
+                    "home_points": 6,
+                    "away_points": 3
+                  },
+                  {
+                    "period_type": "quarter",
+                    "id": "fa980ad6-2b9c-4c73-9ac5-f6f99f6c4db2",
+                    "number": 2,
+                    "sequence": 2,
+                    "home_points": 7,
+                    "away_points": 3
+                  },
+                  {
+                    "period_type": "quarter",
+                    "id": "3c041482-c13c-424f-afad-613da82319b0",
+                    "number": 3,
+                    "sequence": 3,
+                    "home_points": 0,
+                    "away_points": 6
+                  },
+                  {
+                    "period_type": "quarter",
+                    "id": "ff1d8112-81f1-4a7d-a5f9-a050ff404864",
+                    "number": 4,
+                    "sequence": 4,
+                    "home_points": 10,
+                    "away_points": 2
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "13802de7-61d9-4f4e-8f7b-e5e32aedd830",
+      "sequence": 3,
+      "name": "Conference Championship Round",
+      "bracketed": [
+        {
+          "bracket": {
+            "id": "8e830e68-ae05-4499-8eb5-9a8af7e490ab",
+            "name": "NFL Playoffs",
+            "location": "New Orleans, LA, USA"
+          },
+          "games": [
+            {
+              "id": "a8ff18fc-11c8-4fcc-8343-2273d4d20489",
+              "title": "NFC Championship",
+              "status": "closed",
+              "coverage": "full",
+              "game_type": "playoff",
+              "local_game_date": "2025-01-26",
+              "scheduled": "2025-01-26T20:00:00+00:00",
+              "entry_mode": "LDE",
+              "weather": "Cloudy Temp: 40 F, Humidity: 45%, Wind: WNW 11 mph",
+              "conference_game": true,
+              "time_zones": {
+                "venue": "US/Eastern",
+                "home": "US/Eastern",
+                "away": "US/Eastern"
+              },
+              "venue": {
+                "id": "4fa8c29c-6626-464c-8540-314ed7535e1b",
+                "name": "Lincoln Financial Field",
+                "city": "Philadelphia",
+                "state": "PA",
+                "country": "USA",
+                "zip": "19148",
+                "address": "1020 Pattison Avenue",
+                "capacity": 69596,
+                "surface": "turf",
+                "roof_type": "outdoor",
+                "sr_id": "sr:venue:1833",
+                "location": {
+                  "lat": "39.900872",
+                  "lng": "-75.167311"
+                }
+              },
+              "home": {
+                "name": "Philadelphia Eagles",
+                "alias": "PHI",
+                "game_number": 3,
+                "id": "386bdbf9-9eea-4869-bb9a-274b0bc66e80",
+                "source": {
+                  "id": "c2523570-f40a-4438-8cb2-6ca5ec3af805",
+                  "title": "NFC Divisional",
+                  "status": "closed",
+                  "coverage": "full",
+                  "game_type": "playoff",
+                  "scheduled": "2025-01-19T20:00:00+00:00",
+                  "entry_mode": "LDE",
+                  "outcome": "win"
+                }
+              },
+              "away": {
+                "name": "Washington Commanders",
+                "alias": "WAS",
+                "game_number": 3,
+                "id": "22052ff7-c065-42ee-bc8f-c4691c50e624",
+                "source": {
+                  "id": "4cee1421-117a-46ab-b458-c265a72fc946",
+                  "title": "NFC Divisional",
+                  "status": "closed",
+                  "coverage": "full",
+                  "game_type": "playoff",
+                  "scheduled": "2025-01-19T01:00:00+00:00",
+                  "entry_mode": "LDE",
+                  "outcome": "win"
+                }
+              },
+              "scoring": {
+                "home_points": 55,
+                "away_points": 23,
+                "periods": [
+                  {
+                    "period_type": "quarter",
+                    "id": "6823b712-9745-4953-9eab-5e813dfa6d84",
+                    "number": 1,
+                    "sequence": 1,
+                    "home_points": 14,
+                    "away_points": 3
+                  },
+                  {
+                    "period_type": "quarter",
+                    "id": "62041ec7-49bd-471e-9f7b-3ecf380da51d",
+                    "number": 2,
+                    "sequence": 2,
+                    "home_points": 13,
+                    "away_points": 12
+                  },
+                  {
+                    "period_type": "quarter",
+                    "id": "69f826ea-01a3-46b5-a901-1ae0bf8222bd",
+                    "number": 3,
+                    "sequence": 3,
+                    "home_points": 7,
+                    "away_points": 8
+                  },
+                  {
+                    "period_type": "quarter",
+                    "id": "47b42d35-4881-46aa-b520-18c9482e83a1",
+                    "number": 4,
+                    "sequence": 4,
+                    "home_points": 21,
+                    "away_points": 0
+                  }
+                ]
+              }
+            },
+            {
+              "id": "3d05fcdb-d1f1-4de9-850d-6ef41b3f883d",
+              "title": "AFC Championship",
+              "status": "closed",
+              "coverage": "full",
+              "game_type": "playoff",
+              "local_game_date": "2025-01-26",
+              "scheduled": "2025-01-26T23:30:00+00:00",
+              "entry_mode": "LDE",
+              "weather": "Clear Temp: 31 F, Humidity: 45%, Wind: W 8 mph",
+              "conference_game": true,
+              "time_zones": {
+                "venue": "US/Central",
+                "home": "US/Central",
+                "away": "US/Eastern"
+              },
+              "venue": {
+                "id": "2ec4c411-dac2-403d-b091-6b6aa4a0a914",
+                "name": "GEHA Field at Arrowhead Stadium",
+                "city": "Kansas City",
+                "state": "MO",
+                "country": "USA",
+                "zip": "64129",
+                "address": "One Arrowhead Drive",
+                "capacity": 76416,
+                "surface": "turf",
+                "roof_type": "outdoor",
+                "sr_id": "sr:venue:8189",
+                "location": {
+                  "lat": "39.049019",
+                  "lng": "-94.484140"
+                }
+              },
+              "home": {
+                "name": "Kansas City Chiefs",
+                "alias": "KC",
+                "game_number": 2,
+                "id": "6680d28d-d4d2-49f6-aace-5292d3ec02c2",
+                "source": {
+                  "id": "9e0aac39-b534-48ee-8a88-af0214ecf20d",
+                  "title": "AFC Divisional",
+                  "status": "closed",
+                  "coverage": "full",
+                  "game_type": "playoff",
+                  "scheduled": "2025-01-18T21:30:00+00:00",
+                  "entry_mode": "LDE",
+                  "outcome": "win"
+                }
+              },
+              "away": {
+                "name": "Buffalo Bills",
+                "alias": "BUF",
+                "game_number": 3,
+                "id": "768c92aa-75ff-4a43-bcc0-f2798c2e1724",
+                "source": {
+                  "id": "aafd386c-94e0-4856-ac49-84a7fed3e7f6",
+                  "title": "AFC Divisional",
+                  "status": "closed",
+                  "coverage": "full",
+                  "game_type": "playoff",
+                  "scheduled": "2025-01-19T23:30:00+00:00",
+                  "entry_mode": "LDE",
+                  "outcome": "win"
+                }
+              },
+              "scoring": {
+                "home_points": 32,
+                "away_points": 29,
+                "periods": [
+                  {
+                    "period_type": "quarter",
+                    "id": "15f2c42d-8594-4645-a4bf-075d53e45136",
+                    "number": 1,
+                    "sequence": 1,
+                    "home_points": 7,
+                    "away_points": 3
+                  },
+                  {
+                    "period_type": "quarter",
+                    "id": "188541b3-c957-49ed-8e9f-1ad920cafc8e",
+                    "number": 2,
+                    "sequence": 2,
+                    "home_points": 14,
+                    "away_points": 13
+                  },
+                  {
+                    "period_type": "quarter",
+                    "id": "d4248d57-79e0-4cbd-aa5c-18f627626423",
+                    "number": 3,
+                    "sequence": 3,
+                    "home_points": 0,
+                    "away_points": 6
+                  },
+                  {
+                    "period_type": "quarter",
+                    "id": "940874e5-5b9a-4383-8239-988ddd719197",
+                    "number": 4,
+                    "sequence": 4,
+                    "home_points": 11,
+                    "away_points": 7
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "5d6c9534-1c62-4161-87f4-4d81fa8b9edd",
+      "sequence": 4,
+      "name": "Super Bowl",
+      "bracketed": [
+        {
+          "bracket": {
+            "id": "8e830e68-ae05-4499-8eb5-9a8af7e490ab",
+            "name": "NFL Playoffs",
+            "location": "New Orleans, LA, USA"
+          },
+          "games": [
+            {
+              "id": "ca9d8f84-8e7b-4ee7-a310-54c2e3ca4edc",
+              "title": "Super Bowl LIX",
+              "parent_id": "f6c2b12d-966c-41a5-98a7-054620fba38b",
+              "status": "closed",
+              "coverage": "full",
+              "game_type": "playoff",
+              "local_game_date": "2025-02-09",
+              "scheduled": "2025-02-09T23:30:00+00:00",
+              "entry_mode": "LDE",
+              "weather": "Controlled Climate Temp: 73 F, Humidity: 87%, Wind: NE 5 mph",
+              "conference_game": false,
+              "time_zones": {
+                "venue": "US/Central",
+                "home": "US/Eastern",
+                "away": "US/Central"
+              },
+              "venue": {
+                "id": "3c85d89a-ec66-4983-acd5-1381d6c8673a",
+                "name": "Caesars Superdome",
+                "city": "New Orleans",
+                "state": "LA",
+                "country": "USA",
+                "zip": "70112",
+                "address": "1500 Sugar Bowl Drive",
+                "capacity": 73208,
+                "surface": "artificial",
+                "roof_type": "dome",
+                "sr_id": "sr:venue:8195",
+                "location": {
+                  "lat": "29.950928",
+                  "lng": "-90.080876"
+                }
+              },
+              "home": {
+                "name": "Philadelphia Eagles",
+                "alias": "PHI",
+                "game_number": 4,
+                "id": "386bdbf9-9eea-4869-bb9a-274b0bc66e80",
+                "source": {
+                  "id": "a8ff18fc-11c8-4fcc-8343-2273d4d20489",
+                  "title": "NFC Championship",
+                  "status": "closed",
+                  "coverage": "full",
+                  "game_type": "playoff",
+                  "scheduled": "2025-01-26T20:00:00+00:00",
+                  "entry_mode": "LDE",
+                  "outcome": "win"
+                }
+              },
+              "away": {
+                "name": "Kansas City Chiefs",
+                "alias": "KC",
+                "game_number": 3,
+                "id": "6680d28d-d4d2-49f6-aace-5292d3ec02c2",
+                "source": {
+                  "id": "3d05fcdb-d1f1-4de9-850d-6ef41b3f883d",
+                  "title": "AFC Championship",
+                  "status": "closed",
+                  "coverage": "full",
+                  "game_type": "playoff",
+                  "scheduled": "2025-01-26T23:30:00+00:00",
+                  "entry_mode": "LDE",
+                  "outcome": "win"
+                }
+              },
+              "scoring": {
+                "home_points": 40,
+                "away_points": 22,
+                "periods": [
+                  {
+                    "period_type": "quarter",
+                    "id": "7bac3e97-e263-4c92-bb3a-148bfaabf49f",
+                    "number": 1,
+                    "sequence": 1,
+                    "home_points": 7,
+                    "away_points": 0
+                  },
+                  {
+                    "period_type": "quarter",
+                    "id": "ba17017a-dc4f-4af0-ad8f-3e43001fc719",
+                    "number": 2,
+                    "sequence": 2,
+                    "home_points": 17,
+                    "away_points": 0
+                  },
+                  {
+                    "period_type": "quarter",
+                    "id": "a995ae79-3071-42d6-8b59-d70dc49c7bad",
+                    "number": 3,
+                    "sequence": 3,
+                    "home_points": 10,
+                    "away_points": 6
+                  },
+                  {
+                    "period_type": "quarter",
+                    "id": "e6f42e4b-0146-4143-b24c-f97f991455e8",
+                    "number": 4,
+                    "sequence": 4,
+                    "home_points": 6,
+                    "away_points": 16
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

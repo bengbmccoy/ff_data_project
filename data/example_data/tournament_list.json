@@ -1,0 +1,22 @@
+{
+  "league": {
+    "id": "3c6d318a-6164-4290-9bbc-bf9bb21cc4b8",
+    "name": "National Football League",
+    "alias": "NFL"
+  },
+  "season": {
+    "id": "26a6a4e0-dfc9-11ee-8f7c-27de425212d4",
+    "year": 2024,
+    "type": "PST"
+  },
+  "tournaments": [
+    {
+      "id": "d128603c-516d-4814-83bf-b14085503e1a",
+      "name": "NFL Playoffs",
+      "location": "New Orleans, LA, USA",
+      "status": "closed",
+      "start_date": "2025-01-11",
+      "end_date": "2025-02-09"
+    }
+  ]
+}
