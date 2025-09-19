@@ -10,7 +10,6 @@ import os
 from dotenv import load_dotenv
 import json
 
-
 # Load environment variables from .env file
 load_dotenv()
 api_key = os.getenv("API_KEY")
@@ -46,6 +45,6 @@ if args.g:
     print(response.json())
 
     # save data to file just in case
-    with open('../../data/raw_json/raw_season_schedule_' + str(args.year) + '_' + str(args.type) + '.json', 'w', encoding='utf-8') as f:
+    with open('../../data/raw_json/season_schedule/raw_season_schedule_' + str(args.year) + '_' + str(args.type) + '.json', 'w', encoding='utf-8') as f:
         json.dump(data, f, ensure_ascii=False, indent=4)
 

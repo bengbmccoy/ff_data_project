@@ -5,10 +5,8 @@
 # import required libraries
 import argparse
 import os
-from dotenv import load_dotenv
 import json
 import pandas as pd
-import numpy as np
 import sqlite3
 import sys
 
@@ -21,7 +19,7 @@ parser.add_argument('-verbose', action='store_true', default=False,
 args = parser.parse_args()
 
 # get all raw json files
-path_to_json = '../../data/raw_json/'
+path_to_json = '../../data/raw_json/season_schedule/'
 json_files = [pos_json for pos_json in os.listdir(path_to_json) if pos_json.endswith('.json')]
 
 # print all files to be transformed
