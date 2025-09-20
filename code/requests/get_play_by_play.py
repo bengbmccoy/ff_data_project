@@ -27,24 +27,19 @@ parser.add_argument('-limit', type=int, default=1,
                     help='how many game_ids to retrieve')
 args = parser.parse_args()
 
+# SQL query to request the game_ids from the transform_season_schedule table based on user input
 sql_query = "SELECT game_id, year, season_type FROM transform_season_schedule where year = " + str(args.year) + " and season_type = '" + str(args.type) + "' limit " + str(args.limit) + ";"
-print(sql_query)
 
-# get list of game IDs logic goes here
+# make connection to the sqlite database
 conn = sqlite3.connect('../../data/sqlite/ff_proj.db')
 cursor = conn.cursor()
 
+# attempt to request game IDs, add them to a list, close DB connection when complete
 try:
-    cursor.execute(sql_query)
-
-    # 4. Fetch the results
-    # fetchall() retrieves all rows as a list of tuples.
-    # fetchone() retrieves a single row.
-    # fetchmany(size) retrieves a specified number of rows.
-    rows = cursor.fetchall()
     game_ids = []
+    cursor.execute(sql_query)
+    rows = cursor.fetchall()
 
-    # 5. Process the results
     for row in rows:
         game_ids.append(row[0])
 
@@ -52,20 +47,20 @@ except sqlite3.Error as e:
     print(f"Error executing query: {e}")
 
 finally:
-    # 6. Close the database connection
-    # It's good practice to close the connection when done.
     if conn:
         conn.close()
 
+# print game IDs to request for visibility
 print("Fetched the below game IDs:")
 print(game_ids)
 
 # call API endpoint
 if args.g:
 
+    # iterate through game IDs
     for i in game_ids:
+        
         url = "https://api.sportradar.com/nfl/official/trial/v7/en/games/" + str(i) + "/pbp.json"
-
         print("Requesting data from: " + url)
 
         # request logic
@@ -74,14 +69,14 @@ if args.g:
             "x-api-key": api_key
         }
 
+        # call API endpoint
         response = requests.get(url, headers=headers)
         data = response.json()
 
-        # save data to file just in case
+        # save data to raw_json direcotry
         with open('../../data/raw_json/play_by_play/raw_play_by_play_' + str(args.year) + '_' + str(args.type) + '_' + str(i) + '.json', 'w', encoding='utf-8') as f:
             json.dump(data, f, ensure_ascii=False, indent=4)
 
+        # pause to not blacklisted by sportradar
         print("One second pause....")
         time.sleep(1)
-
-# save JSON to raw_json/play_by_play directory here
