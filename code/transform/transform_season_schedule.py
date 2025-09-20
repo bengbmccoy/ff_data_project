@@ -24,7 +24,7 @@ json_files = [pos_json for pos_json in os.listdir(path_to_json) if pos_json.ends
 
 # print all files to be transformed
 if args.verbose:
-    print(json_files)  # for me this prints ['foo.json']
+    print(json_files)
 
 json_data = []
 
