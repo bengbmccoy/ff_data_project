@@ -68,9 +68,46 @@ for data in json_data:
 
     row_week = data['summary']['week']['sequence']
 
-    for i in data['periods']:
+    for period in data['periods']:
 
-        row_
+        row_period_type = period['period_type']
+        row_period_id = period['id']
+        row_period_number = period['number']
+
+        for play in period['pbp']:
+
+            if play['type'] == "drive":
+
+                for event in play['events']:
+
+                    if event['type'] == 'play':
+
+                        row_event_id = event['id']
+                        row_play_type = event['play_type']
+                        row_play_clock = event['clock']
+
+                        if event['play_type'] == 'rush':
+                            print('RUSH')
+                        elif event['play_type'] == 'pass':
+                            print('PASS')
+                        elif event['play_type'] == 'punt':
+                            print('PUNT')
+                        elif event['play_type'] == 'field_goal':
+                            print('FIELD GOAL')
+                        elif event['play_type'] == 'kickoff':
+                            print('KICKOFF')
+                        elif event['play_type'] == 'extra_point':
+                            print('XP')
+                        elif event['play_type'] == 'penalty':
+                            print('PENALTY')
+                        elif event['play_type'] == 'conversion':
+                            print('CONVERSION')
+                        else:
+                            print('##########################')
+                            print(event['play_type'])
+                    
+                        
+
 
     # # iterate through the games field in each week
     # for j in item['summary']:
@@ -102,8 +139,11 @@ for data in json_data:
     #     new_row_df = pd.DataFrame([append_dict])
     #     results_df = pd.concat([results_df, new_row_df], ignore_index=True)
 
-    print(row_game_id)
-    print(row_game_type)
-    print(row_weather)
-    print(row_year)
-    print(row_week)
+        # print(row_game_id)
+        # print(row_game_type)
+        # print(row_weather)
+        # print(row_year)
+        # print(row_week)
+        # print(row_period_type)
+        # print(row_period_id)
+        # print(row_period_number)

@@ -2,6 +2,10 @@
 # the transform_season_schedule table in the sqlite database, requests all the play-by-play data for a list of 
 # game IDs, and saves this raw JSON data to the raw_json/play_by_play folder.
 
+# TODO
+# 1. Enforce which years and types can be passed in correctly
+# 2. Add verbose argument and print statements
+
 # import required libraries
 import requests
 import argparse

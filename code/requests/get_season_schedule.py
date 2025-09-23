@@ -2,6 +2,7 @@
 
 # TODO
 # 1. Enforce which years and types can be passed in correctly
+# 2. Add verbose argument and print statements
 
 # import required libraries
 import requests
