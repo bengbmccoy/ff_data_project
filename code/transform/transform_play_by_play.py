@@ -65,11 +65,24 @@ for i in json_files:
 
         json_data.append(json.load(f))
 
-# init the pass play dataframe
-play_data_columns = ['game_id', 'game_type', 'weather', 'year', 'season_type', 'week', 
-                     'period_type', 'period_id', 'period_number', 
-                     'event_id', 'play_type', 'clock', 'home_points', 'away_points', 'description', 'flat_events_dict']
-results_df = pd.DataFrame(columns=play_data_columns)
+# # init the pass play dataframe
+# play_data_columns = ['game_id', 'game_type', 'weather', 'year', 'season_type', 'week', 
+#                      'period_type', 'period_id', 'period_number', 
+#                      'event_id', 'play_type', 'clock', 'home_points', 'away_points', 'description', 'flat_events_dict']
+# results_df = pd.DataFrame(columns=play_data_columns)
+
+transform_play_events = pd.DataFrame()
+transform_play_details = pd.DataFrame()
+
+event_fields = ['away_points','blitz','clock','created_at','description','fake_field_goal',
+                'fake_punt','goaltogo','hash_mark','home_points','huddle','id','left_tightends','men_in_box',
+                'official','pass_route','play_action','play_direction','players_rushed','pocket_location',
+                'qb_at_snap','right_tightends','run_pass_option','running_lane','scoring_play','screen_pass',
+                'sequence','type','updated_at','wall_clock', 'play_type']
+
+play_detail_fields = ['category','description','direction','alias','yardline','first_touch','no_attempt',
+                      'onside','description','no_play','result','yards','reason_missed','result','sack_split',
+                      'safety','sequence','alias','yardline','yards']
 
 
 
@@ -103,55 +116,77 @@ for data in json_data:
 
                 for i in play['events']:
 
-                    try:
+                    if i['type'] != 'event':
 
-                        row_event_id = i['id']
-                        row_play_type = i['play_type']
-                        row_clock = i['clock']
-                        row_home_points = i['home_points']
-                        row_away_points = i['away_points']
-                        row_play_description = i['description']
+                        base_dict = {}
 
-                        flattened_data = flatten_json(i)
-                        row_flat_events_dict = flattened_data
+                        base_dict['game_id'] = row_game_id
+                        base_dict['game_type'] = row_game_type
+                        base_dict['weather'] = row_weather
+                        base_dict['year'] = row_year
+                        base_dict['season_type'] = row_season_type
+                        base_dict['week'] = row_week
+                        base_dict['period_type'] = row_period_type
+                        base_dict['period_id'] = row_period_id
+                        base_dict['period_number'] = row_period_number
 
-                        # create dict of useful info to append to results df
-                        append_dict = {
-                            'game_id' : row_game_id,
-                            'game_type' : row_game_type,
-                            'weather' : row_weather,
-                            'year' : row_year,
-                            'season_type' : row_season_type,
-                            'week' : row_week,
-                            'period_type' : row_period_type,
-                            'period_id' : row_period_id,
-                            'period_number' : row_period_number,
-                            'event_id' : row_event_id,
-                            'play_type' : row_play_type,
-                            'play_type' : row_play_type,
-                            'play_type' : row_play_type,
-                            'play_type' : row_play_type,
-                            'clock': row_clock,
-                            'home_points' : row_home_points, 
-                            'away_points' : row_away_points,
-                            'play_description' : row_play_description,
-                            'flat_events_dict' : row_flat_events_dict,
-                        }
+                        event_dict = {} | base_dict
 
-                        print(append_dict)
+                        for j in event_fields:
+                            try:
+                                event_dict[j] = i[j]
+                            except:
+                                event_dict[j] = None
 
-                    except:
+                        new_event_df = pd.DataFrame([event_dict])
+                        transform_play_events = pd.concat([transform_play_events, new_event_df], ignore_index=True)
 
-                        print(row_period_id)
+                        details_dict = {} | event_dict
+
+                        for k in i['details']:
+                            # print(k)
+
+                            for l in play_detail_fields:
+
+                                try:
+                                    details_dict[l] = k[l]
+                                except:
+                                    details_dict[l] = None
+
+                            # convert to pandas df and append to exisitng results_df
+                            new_detail_df = pd.DataFrame([details_dict])
+                            transform_play_details = pd.concat([transform_play_details, new_detail_df], ignore_index=True)
+
+                            # print(new_row_df)
+
+# for debugging
+if args.verbose:
+    print('pass')
 
 
-                    # convert to pandas df and append to exisitng results_df
-                    new_row_df = pd.DataFrame([append_dict])
+# write to database
+if args.write:
+    db_directory = "../../data/sqlite/"  # Name of the directory to store the database
+    db_filename = "ff_proj.db"
+    event_table_name = 'transform_play_by_play_events'
+    detail_table_name = 'transform_play_by_play_details'
 
-                    print(results_df.columns)
+    db_path = os.path.join(db_directory, db_filename)
 
-                    print(new_row_df.columns)
+    try:
+        print('connecting')
+        conn = sqlite3.connect(db_path)
 
-                    results_df = pd.concat([results_df, new_row_df], ignore_index=True)
-                        
-print(results_df.groupby('play_type')['play_type'].count())
+        print('writing transform_play_events')
+        transform_play_events.to_sql(event_table_name, conn, if_exists='replace', index=False)
+
+        print('writing transform_play_details')
+        transform_play_details.to_sql(detail_table_name, conn, if_exists='replace', index=False)
+
+    except:
+        print("Could not connect to database")
+        sys.exit(1)
+
+    print("Data written to database")
+
+    conn.close()
