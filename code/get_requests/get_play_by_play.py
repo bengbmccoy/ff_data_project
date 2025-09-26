@@ -29,10 +29,23 @@ parser.add_argument('-type', type=str, default="REG",
                     help='type of season to request')
 parser.add_argument('-limit', type=int, default=1,
                     help='how many game_ids to retrieve')
+parser.add_argument('-verbose', action='store_true', default=False,
+                    help='Print all steps')
 args = parser.parse_args()
 
+# find existing game_IDs in data/raw_json/play_by_play
+# get all raw json files
+path_to_json = '../../data/raw_json/play_by_play/'
+json_files = [pos_json for pos_json in os.listdir(path_to_json) if pos_json.endswith('.json')]
+
+# get all existing game_IDs in raw data
+raw_data_game_ids = []
+for i in json_files:
+    j = i.split(".")[0]
+    raw_data_game_ids.append(j.split("_")[-1])
+
 # SQL query to request the game_ids from the transform_season_schedule table based on user input
-sql_query = "SELECT game_id, year, season_type FROM transform_season_schedule where year = " + str(args.year) + " and season_type = '" + str(args.type) + "' limit " + str(args.limit) + ";"
+sql_query = "SELECT game_id, year, season_type FROM transform_season_schedule where year = " + str(args.year) + " and season_type = '" + str(args.type) + "';"
 
 # make connection to the sqlite database
 conn = sqlite3.connect('../../data/sqlite/ff_proj.db')
@@ -54,15 +67,24 @@ finally:
     if conn:
         conn.close()
 
+# add incremental & limit logic
+new_game_ids =[game_id for game_id in game_ids if game_id not in raw_data_game_ids]
+if args.limit:
+    request_game_ids = new_game_ids[:args.limit]
+
 # print game IDs to request for visibility
-print("Fetched the below game IDs:")
-print(game_ids)
+if args.verbose:
+    print("Fetched the below game IDs:")
+    print(request_game_ids)
+    print("Requesting a total of " + str(len(request_game_ids)) + " game IDs")
+    if len(request_game_ids) < args.limit:
+        print("Only requesting " + str(len(request_game_ids)) + " games due to incremental logic")
 
 # call API endpoint
 if args.g:
 
     # iterate through game IDs
-    for i in game_ids:
+    for i in request_game_ids:
         
         url = "https://api.sportradar.com/nfl/official/trial/v7/en/games/" + str(i) + "/pbp.json"
         print("Requesting data from: " + url)

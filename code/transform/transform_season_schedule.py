@@ -38,6 +38,10 @@ results_df = pd.DataFrame(columns=result_columns)
 
 # iterate through JSONs
 for data in json_data:
+    print(len(data.keys()))
+    print(len(data.values()))
+    print(len(data.items()))
+    print("###########")
 
     # flatten data and select columns for writing to DB
     row_year = data['year']

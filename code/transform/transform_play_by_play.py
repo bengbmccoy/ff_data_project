@@ -1,5 +1,7 @@
 # TODO
 # 1. Handle appending new data instead of just overwiriting the whole table
+# 2. Remove the need to open each file and append to a list of JSONs, just open file, process and write
+# 3. Write better logs for the verbose function
 
 # import required libraries
 import argparse
@@ -116,7 +118,7 @@ for data in json_data:
 
                 for i in play['events']:
 
-                    if i['type'] != 'event':
+                    if i['type'] != 'event' and 'deleted' not in i:
 
                         base_dict = {}
 
@@ -142,9 +144,8 @@ for data in json_data:
                         transform_play_events = pd.concat([transform_play_events, new_event_df], ignore_index=True)
 
                         details_dict = {} | event_dict
-
+                        
                         for k in i['details']:
-                            # print(k)
 
                             for l in play_detail_fields:
 
@@ -153,9 +154,16 @@ for data in json_data:
                                 except:
                                     details_dict[l] = None
 
-                            # convert to pandas df and append to exisitng results_df
-                            new_detail_df = pd.DataFrame([details_dict])
-                            transform_play_details = pd.concat([transform_play_details, new_detail_df], ignore_index=True)
+                            for m in k['players']:
+
+                                details_dict['player_id'] = m['id']
+                                details_dict['player_name'] = m['name']
+                                details_dict['player_pos'] = m['position']
+                                details_dict['player_role'] = m['role']
+
+                                # convert to pandas df and append to exisitng results_df
+                                new_detail_df = pd.DataFrame([details_dict])
+                                transform_play_details = pd.concat([transform_play_details, new_detail_df], ignore_index=True)
 
                             # print(new_row_df)
 
