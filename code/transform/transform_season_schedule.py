@@ -131,5 +131,6 @@ def write_to_db(results_df):
 
     conn.close()
 
+
 if __name__ == "__main__":
     main()

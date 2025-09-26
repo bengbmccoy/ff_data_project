@@ -10,6 +10,7 @@ import os
 from dotenv import load_dotenv
 import json
 
+
 def main(year=2024, type="REG", verbose=False, prod=False):
 
     # get required environment variables
@@ -53,7 +54,7 @@ def main(year=2024, type="REG", verbose=False, prod=False):
             json.dump(data, f, ensure_ascii=False, indent=4)
 
         if verbose:
-            print("Raw data saved to: " + '../../data/raw_json/season_schedule/raw_season_schedule_' + str(year) + '_' + str(type) + '.json')
+            print("Raw data saved to: " + '../data/raw_json/season_schedule/raw_season_schedule_' + str(year) + '_' + str(type) + '.json')
 
 
 def enforce_api_variables(year, type):
@@ -71,6 +72,7 @@ def get_env_var(env_var):
     api_key = os.getenv(env_var)
 
     return api_key
+
 
 if __name__ == "__main__":
     main()
