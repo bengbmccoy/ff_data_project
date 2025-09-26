@@ -49,7 +49,7 @@ def main(year=2024, type="REG", verbose=False, prod=False):
             print("Data received of length: " + str(len(data)))
 
         # save data to file
-        with open('../../data/raw_json/season_schedule/raw_season_schedule_' + str(year) + '_' + str(type) + '.json', 'w', encoding='utf-8') as f:
+        with open('../data/raw_json/season_schedule/raw_season_schedule_' + str(year) + '_' + str(type) + '.json', 'w', encoding='utf-8') as f:
             json.dump(data, f, ensure_ascii=False, indent=4)
 
         if verbose:
@@ -57,10 +57,12 @@ def main(year=2024, type="REG", verbose=False, prod=False):
 
 
 def enforce_api_variables(year, type):
+    # Check that we are not wasting API calls
     if year not in range(2000, 2026):
         return False
     if type not in ["REG", "PST", "PRE"]:
         return False
+    
     return True
 
 def get_env_var(env_var):
